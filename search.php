@@ -12,7 +12,7 @@
         border: 1px solid grey;
         border-radius: 20px 0 0 20px;
         float: left;
-        width: 20%;
+        width: 21%;
         background-color: white;
         transition: width 1s ease-in-out;
     }
@@ -62,7 +62,7 @@
 
 </script>
 <div class="example">
-    <input type="text" placeholder="Search Job.." id="search">
+    <input type="text" placeholder="Search Jobs here.." id="search">
     <button class="btn btn-primary" onclick="results()"><i class="fa fa-search"></i></button>
 </div>
 <div class="result" id="result"></div>
