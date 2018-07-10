@@ -7,7 +7,7 @@ $output=mysqli_query($connect,$query);
 $row=mysqli_fetch_array($output);
 ?>
 
-    <link type="text/css" href="boot3/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="../PHP/boot3/css/bootstrap.css" rel="stylesheet">
     <form action="" method="post">
         <div class="form-group">
             <label for="name">Name of company</label>

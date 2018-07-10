@@ -1,0 +1,109 @@
+.foot {
+    position: absolute;
+    top: 120px;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+.box {
+    position: relative;
+    max-height: 400px;
+    width: 500px;
+    display: none;
+    overflow-y: scroll;
+}
+
+.contain {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin: 10px 0;
+}
+
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+.contain::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.contain img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.contain img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+.time-left {
+    float: left;
+    color: #999;
+}
+
+#msg {
+    width: 400px;
+    padding: 10px;
+    font-size: 20px;
+    height: auto;
+}
+
+.sendmsg {
+    margin-right: 10px;
+    float: right;
+    width: 80px;
+    height: 50px;
+}
+
+.c,
+.m {
+    margin: 10px;
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+}
+
+.c:hover {
+    background-color: red;
+}
+
+#chatheader {
+    padding: 0;
+    margin: 0;
+    cursor: move;
+    font-size: 25px;
+    font-family: cursive;
+}
+
+#chatheader p {
+    font-size: 20px;
+    font-family: serif;
+    color: snow;
+    margin: 0;
+    padding: 0;
+    max-height: 80px;
+}
+
+#online {
+    position: relative;
+    right: -120px;
+    font-size: 20px;
+    color: red;
+/*    color: chartreuse;*/
+}
+

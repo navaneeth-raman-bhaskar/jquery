@@ -9,7 +9,7 @@ $connect=mysqli_connect("localhost","root","","job");
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link type="text/css" href="boot3/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="../PHP/boot3/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
         body {
             background-color: #efebea;
@@ -120,16 +120,16 @@ $connect=mysqli_connect("localhost","root","","job");
                 <table class="table">
                     <h2>Company Info</h2>
                     <?php
-               
+
                {
                   $query="select * from about where id=$id";
                   $output=mysqli_query($connect,$query);
                 $row=mysqli_fetch_array($output);
- 
+
                         echo '<tr>';
                         echo '<th>Building</th>';
                         echo '<td>'.$row['buildName'].'</td>';
-                        echo '</tr>';  
+                        echo '</tr>';
                         echo '<tr>';
                         echo '<th>Street</th>';
                         echo '<td>'.$row['street'].'</td>';
@@ -150,10 +150,10 @@ $connect=mysqli_connect("localhost","root","","job");
                         echo '<th>Mobile</th>';
                         echo '<td>'.$row['mob'].'</td>';
                         echo '</tr>';
-                        
-    
-    
-                
+
+
+
+
                }
                ?>
                 </table>
@@ -202,7 +202,7 @@ $connect=mysqli_connect("localhost","root","","job");
                         <table class="table">
                             <h2>Description</h2>
                             <?php
-               
+
                {
                   $query="select * from about where id=$id";
                   $output=mysqli_query($connect,$query);
@@ -212,8 +212,8 @@ $connect=mysqli_connect("localhost","root","","job");
                         echo '<td>'.$row['description'].'</td>';
                         echo '</tr>';
                     }
-    
-                
+
+
                }
                ?>
                         </table>
@@ -232,7 +232,7 @@ $connect=mysqli_connect("localhost","root","","job");
                             <th>Expiring date</th>
                             <th>Skills required</th>
                             <?php
-                        
+
 $query="select * from jobs where logid=$id ";
 $output=mysqli_query($connect,$query);
 while($row=mysqli_fetch_array($output))

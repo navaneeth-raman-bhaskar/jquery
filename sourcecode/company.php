@@ -1,4 +1,4 @@
-<link type="text/css" href="boot3/css/bootstrap.css" rel="stylesheet">
+<link type="text/css" href="../PHP/boot3/css/bootstrap.css" rel="stylesheet">
 
 <table class="table table-striped">
     <th>Company-Name</th>
@@ -17,6 +17,6 @@ while($row=mysqli_fetch_array($output))
     echo '<td>'.$row['type'].'</td>';
     echo "<td><a href=joblist.php?cid=".$row['cid'].">Available jobs</a></td>";
     echo '</tr>';
-} 
+}
  ?>
 </table>

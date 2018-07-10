@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link type="text/css" href="boot3/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="../JobPortal/boot3/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
         form {
             width: 50%;

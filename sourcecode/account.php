@@ -34,7 +34,7 @@ $sid=$row['studid'];
         <head>
             <meta charset="UTF-8">
             <title>Document</title>
-            <link type="text/css" href="boot3/css/bootstrap.css" rel="stylesheet">
+            <link type="text/css" href="../PHP/boot3/css/bootstrap.css" rel="stylesheet">
             <style type="text/css">
                 body {
                     background-color: #efebea;
@@ -252,7 +252,7 @@ $sid=$row['studid'];
                         echo '<tr>';
                         echo '<th>House</th>';
                         echo '<td>'.$row['buildName'].'</td>';
-                        echo '</tr>';  
+                        echo '</tr>';
                         echo '<tr>';
                         echo '<th>Street</th>';
                         echo '<td>'.$row['street'].'</td>';

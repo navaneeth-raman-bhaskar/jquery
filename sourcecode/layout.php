@@ -10,9 +10,9 @@ session_start();
     <title>Welcome</title>
     <link type="text/css" href="boot3/chat.css" rel="stylesheet">
 
-    <link type="text/css" href="boot3/css/bootstrap.css" rel="stylesheet">
-    <script type="text/javascript" src="boot3/jq/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="boot3/js/bootstrap.js"></script>
+    <link type="text/css" href="../PHP/boot3/css/bootstrap.css" rel="stylesheet">
+    <script type="text/javascript" src="../PHP/jq/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../PHP/boot3/js/bootstrap.js"></script>
 
 
     <style>
@@ -113,7 +113,7 @@ session_start();
             <ul class="nav navbar-nav navbar-right">
                 <?php
        if (isset($_SESSION['type']))
-       { 
+       {
         ?>
                     <li class="drop"><a class="btn"><span class="glyphicon glyphicon-comment"></span> Messages</a>
                         <ul class='menu' style="list-style-type:none;margin:0;padding:0;">
@@ -130,10 +130,10 @@ session_start();
            $output=mysqli_query($connect,$query);
            while($row=mysqli_fetch_array($output))
            {
-            
-            
+
+
                echo '<li class="btn inbo" onclick=message('.$row['toid'].',this)>'.$row['sender'].'</li>';
-            
+
            }
            }
            elseif ($type=='company')
@@ -142,10 +142,10 @@ session_start();
            $output=mysqli_query($connect,$query);
            while($row=mysqli_fetch_array($output))
            {
-            
-            
+
+
                echo '<li class="btn inbo" onclick=message('.$row['toid'].',this)>'.$row['sender'].'</li>';
-            
+
            }
            }
            if ($type!='admin')
@@ -154,10 +154,10 @@ session_start();
            $output=mysqli_query($connect,$query);
             while($row=mysqli_fetch_array($output))
            {
-            
-            
+
+
                echo '<li class="btn inbo" onclick=message('.$row['logid'].',this)>Admin'.$row['logid'].'</li>';
-            
+
            }
            }
            if ($type=='admin')
@@ -171,9 +171,9 @@ session_start();
                    if($row['sname']==NULL)
                        $name=$row['cname'];
         echo '<li class="btn inbo" onclick=message('.$row['toid'].',this)>'.$name.'</li>';
-                     
+
                }
-               
+
        }
            /////////////////////////
     ?>
@@ -199,7 +199,7 @@ session_start();
                 }
                 if (isset($_SESSION['type']))
                 {
-                    
+
                 } if (isset($_SESSION['type']))
                 if (($_SESSION['type'])=='student')
                 {
@@ -220,7 +220,7 @@ session_start();
                                         <?php
                 }
                  if (isset($_SESSION['user']))
-                 { 
+                 {
                 ?>
                                             <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                                             <?php }

@@ -5,7 +5,7 @@ $connect=mysqli_connect("localhost","root","","job");
 $query="select student.name,student.logid,jobs.title,email from applied inner join  jobs on applied.jobid = jobs.jobid inner join student on applied.logid = student.logid inner join credential on student.logid=credential.logid where jobs.logid=$clogid;";
 $output=mysqli_query($connect,$query);
 ?>
-    <link type="text/css" href="boot3/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="../PHP/boot3/css/bootstrap.css" rel="stylesheet">
 
     <table class="table table-striped">
         <th>Stud Name</th>

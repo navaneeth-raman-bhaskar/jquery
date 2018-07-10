@@ -3,7 +3,7 @@ session_start();
 $id=$_SESSION['id'];
 $t=$_SESSION['type'];
 ?>
-<link type="text/css" href="boot3/css/bootstrap.css" rel="stylesheet">
+<link type="text/css" href="../PHP/boot3/css/bootstrap.css" rel="stylesheet">
 <table class="table">
     <th>JobID</th>
     <th>Title</th>
@@ -21,7 +21,7 @@ while($row=mysqli_fetch_array($output))
     echo '<td>'.$row['name'].'</td>';
   if($t=='student'){
        echo '<td><a href=cancel.php?jid='.$row["jobid"].'>cancel</a>
-        </td>'; 
+        </td>';
   }
     echo '</tr>';
 } ?>

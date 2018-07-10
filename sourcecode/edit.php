@@ -10,7 +10,7 @@ $connect=mysqli_connect("localhost","root","","job");
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link type="text/css" href="boot3/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="../PHP/boot3/css/bootstrap.css" rel="stylesheet">
 </head>
 
 <body>

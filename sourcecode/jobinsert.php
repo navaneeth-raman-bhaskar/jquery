@@ -4,7 +4,7 @@ $id=$_SESSION['id'];
 $connect=mysqli_connect("localhost","root","","job");
 
 ?>
-<link type="text/css" href="boot3/css/bootstrap.css" rel="stylesheet">
+<link type="text/css" href="../PHP/boot3/css/bootstrap.css" rel="stylesheet">
 
 <table class="table">
     <tr>
@@ -36,10 +36,10 @@ if (isset($_POST['ok']))
     $s=$_POST['sal'];
     $e=$_POST['exp'];
     $sk=$_POST['skill'];
-  
+
     $query="insert into jobs(logid,title,description,salary,closedate,skillset) values ($id,'$t','$d',$s,'$e','$sk')";
     $output=mysqli_query($connect,$query);
-    
+
 
     header("location:comdetails.php");
 }

@@ -7,7 +7,7 @@ $query="select * from jobs where jobid=$jid";
 $output=mysqli_query($connect,$query);
 $row=mysqli_fetch_array($output);
 ?>
-    <link type="text/css" href="boot3/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="../PHP/boot3/css/bootstrap.css" rel="stylesheet">
 
     <table class="table">
         <tr>
@@ -39,13 +39,13 @@ if (isset($_POST['ok']))
     $s=$_POST['sal'];
     $e=$_POST['exp'];
     $sk=$_POST['skill'];
-  
+
     $query="update jobs set  title='$t',description='$d',salary=$s,closedate='$e',skillset='$sk' where jobid=$jid";
     $output=mysqli_query($connect,$query);
     echo "<pre>";
     print_r($connect);
     echo "</pre>";
-    
+
     header("location:comdetails.php");
 }
 ?>
