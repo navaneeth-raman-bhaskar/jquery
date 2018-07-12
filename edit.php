@@ -1,6 +1,7 @@
 <?php
 session_start();
 $logid=$_SESSION['id'];
+$who=$_SESSION['type'];
 $id=$_GET['id'];
 $connect=mysqli_connect("localhost","root","","job");
 ?>
@@ -36,7 +37,10 @@ $connect=mysqli_connect("localhost","root","","job");
         $desc=$_POST['desc'];
         $query="update about set description='$desc' where id=$logid";
         $output=mysqli_query($connect,$query);
-        header("location:account.php");
+        if ($who=='student')
+                    header("location:account.php");
+        elseif($who=='company')
+                    header("location:comdetails.php");
     }
     }
     elseif($id=='address')
@@ -92,7 +96,10 @@ $connect=mysqli_connect("localhost","root","","job");
         $m=$_POST['mob'];
         $query="update about set buildName='$h',street='$st',district='$d',state='$s',country='$c',pin='$p',mob='$m' where id=$logid";
         $output=mysqli_query($connect,$query);
-        header("location:account.php");
+         if ($who=='student')
+                    header("location:account.php");
+        elseif($who=='company')
+                    header("location:comdetails.php");
     }
             }
     elseif($id=='cv'){
