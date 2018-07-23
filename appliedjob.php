@@ -29,6 +29,7 @@ while($row=mysqli_fetch_array($output))
   }
     echo '</tr>';
 }
+    echo '<a class="btn btn-primary" href="joblist.php">apply for new jobs</a>';
 }
     else echo 'ACCESS DENIED';
 }
