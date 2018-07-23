@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(isset($_SESSION['id']))
+{
+if ($_SESSION['type']=='company')
+{
 $id=$_SESSION['id'];
 $jid=$_GET['id'];
 $connect=mysqli_connect("localhost","root","","job");
@@ -48,4 +52,6 @@ if (isset($_POST['ok']))
     
     header("location:comdetails.php");
 }
+}else echo 'ACCESS DENIED';
+}else echo 'Not logged in';
 ?>

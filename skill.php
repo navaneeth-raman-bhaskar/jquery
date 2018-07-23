@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(isset($_SESSION['id']))
+{
+if ($_SESSION['type']=='student')
+{
 $skill=$_GET['skill'];
 $id=$_SESSION['id'];
 $connect=mysqli_connect("localhost","root","","job");
@@ -17,5 +21,6 @@ $output=mysqli_query($connect,$query);
                         echo '<td style="visibility:visible;" class="close">&times;</td>';
                         echo '</tr>';
                     }
-
+}else echo 'ACCESS DENIED';
+}else echo 'not logged in';
 ?>

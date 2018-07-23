@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(isset($_SESSION['id']))
+{
+if ($_SESSION['type']=='student')
+{
 $c=$_GET['c'];
 $p=$_GET['p'];
 $s=$_GET['s'];
@@ -44,3 +48,8 @@ $output=mysqli_query($connect,$query);
             <td style="" colspan="2" class="savex btn btn-primary" onclick="donex()">Done</td>
 
     </table>
+    <?php
+}else echo 'ACCESS DENIED';
+}else echo 'Not Logged in';
+
+    ?>

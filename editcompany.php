@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(isset($_SESSION['id']))
+{
+if ($_SESSION['type']=='company')
+{
 $id=$_SESSION['id'];
 $connect=mysqli_connect("localhost","root","","job");
 $query="select * from company where logid=$id";
@@ -29,4 +33,6 @@ $row=mysqli_fetch_array($output);
         $query="update company set name='$name',type='$type' where logid=$id";
         $output=mysqli_query($connect,$query);
     }
+}else echo 'ACCESS DENIED';
+}else echo 'Not logged in';
     ?>

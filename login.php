@@ -1,5 +1,7 @@
 <?php
 session_start();
+if (isset($_POST['username']))
+{
 $uname=$_POST['username'];
 $pass=$_POST['password'];
 $connect=mysqli_connect("localhost","root","","job");
@@ -31,6 +33,7 @@ $type=$row['type'];
 $_SESSION['type']=$type; 
 $query="update status set online=1 where logid=$id";
 $output=mysqli_query($connect,$query);
+}
 }
 header("location:layout.php");
 ?>

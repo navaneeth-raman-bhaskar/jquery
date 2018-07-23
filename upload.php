@@ -1,12 +1,15 @@
 <?php
 session_start();
+if(isset($_SESSION['id']))
+{
+if ($_SESSION['type']=='student')
+{
 $id=$_SESSION['id'];
 $type=$_SESSION['type'];
 $folder="resume/";
 $fname=$_FILES['resume']['name'];
 $filepath=$folder.$fname;
-if ($type=='student')
-{
+
 if ($_FILES['resume']['type']=="application/pdf")
 {
 if($ok=move_uploaded_file($_FILES['resume']['tmp_name'],$filepath)){
@@ -25,7 +28,6 @@ else
 }
 }
 else
-    echo '<h2>You are not supposed to upload resume !!</h2> ';
-    echo 'Hacking is an offence keep in mind that !';
-
+    echo '<h2>You are not supposed to Access this page !!</h2> ';
+}else echo 'not logged in';
 ?>
