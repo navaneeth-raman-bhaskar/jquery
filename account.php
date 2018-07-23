@@ -1,5 +1,7 @@
 <?php
 session_start();
+if(isset($_SESSION['id']))
+{
 if((isset($_GET['sid'])&&isset($_GET['em']))||$_SESSION['type']=='student')
 {
 $id=$_SESSION['id'];
@@ -392,4 +394,9 @@ $sid=$row['studid'];
         </html>
         <?php
 }
+    else
+        echo 'ACCESS DENIED';
+}
+else
+    echo 'NOT LOGGED IN';
 ?>
