@@ -11,6 +11,7 @@ $query="insert into applied values($jid,$id)";
 $output=mysqli_query($connect,$query);
 
 echo '<h2>Successfully Applied</h2>';
+    header("refresh:2;appliedjob.php");
 } else echo 'ACCESS DENIED';
 }else echo 'Not logged in';
 ?>
