@@ -17,20 +17,28 @@ if ($_SESSION['type']=='company')
 
 //////////////////////////////
 $connect=mysqli_connect("localhost","root","root","job");
+
 $logid=$_SESSION['id'];
 $msg=$_GET['msg'];
-$time=date("h:i:sa");
+$time=date("h:i:s");
 $seen=0;
 $toid=$_GET['toid'];
 //////////////////////////////
 $query="select type from credential where logid=$toid";
 $output=mysqli_query($connect,$query);
+
 $row=mysqli_fetch_array($output);
+
+
+
 $type=$row['type'];
 if ($type=='admin')
 {
  $toimgsrc="boot3/adm.jpg";
 }
+
+
+
 
 if ($type=='student')
 {
@@ -48,6 +56,7 @@ if($msg)
 {
 $query="insert into message(senderid,receiverid,msg,seen,time) values($logid,$toid,'$msg',$seen,'$time')";
 $output=mysqli_query($connect,$query);
+
 }
 $query="select * from message where senderid=$logid and receiverid=$toid or receiverid=$logid and senderid=$toid order by time";
 $output=mysqli_query($connect,$query);

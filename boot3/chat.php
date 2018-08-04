@@ -3,6 +3,7 @@
 <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">-->
 
 <script>
+    setInterval(function(){return send();},1000);//refresh function in each 1sec
     function checkonline() {
         var os = document.getElementById("onoroff").value;
         if (os == 1)
@@ -14,7 +15,8 @@
     function send() {
         var elem = document.getElementById('msg');
         var msg = elem.value;
-        var toid = document.getElementById("to").value; {
+        var toid = document.getElementById("to").value;
+
             var x = new XMLHttpRequest;
             x.open("GET", "boot3/send.php?msg=" + msg + "&toid=" + toid);
             x.send();
@@ -23,9 +25,9 @@
                     document.getElementById('box').innerHTML = this.responseText;
                 }
             }
-        }
+
         checkonline();
-        document.getElementById("msg").value = "";
+        document.getElementById("msg").value = "";//for resetting chat box value
 
     }
 

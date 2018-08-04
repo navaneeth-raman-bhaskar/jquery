@@ -138,7 +138,7 @@ session_start();
            }
            elseif ($type=='company')
            {
-           $query="SELECT student.logid as toid,student.name as sender from applied inner join student on applied.logid=student.logid INNER join jobs on jobs.jobid=applied.jobid where jobs.logid=$logid GROUP by student.logid";
+           $query="SELECT DISTINCT student.logid as toid,student.name as sender from applied inner join student on applied.logid=student.logid INNER join jobs on jobs.jobid=applied.jobid where jobs.logid=$logid ";
            $output=mysqli_query($connect,$query);
            while($row=mysqli_fetch_array($output))
            {
@@ -162,7 +162,7 @@ session_start();
            }
            if ($type=='admin')
            {
-               $query="select senderid as toid,student.name as sname,company.name as cname from message left join student on student.logid=message.senderid LEFT join company on company.logid=message.senderid WHERE receiverid=5 GROUP BY senderid ";
+               $query="select DISTINCT senderid as toid,student.name as sname,company.name as cname from message left join student on student.logid=message.senderid LEFT join company on company.logid=message.senderid WHERE receiverid=5 ";
                $output=mysqli_query($connect,$query);
                while($row=mysqli_fetch_assoc($output))
                {
