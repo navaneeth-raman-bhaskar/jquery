@@ -9,7 +9,7 @@ $p=$_GET['p'];
 $s=$_GET['s'];
 $e=$_GET['e'];
 $id=$_SESSION['id'];
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
 {
 $query="insert into experience values($id,'$c','$p','$s','$e')";
 $output=mysqli_query($connect,$query);

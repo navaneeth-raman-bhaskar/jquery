@@ -14,7 +14,7 @@ if ($_FILES['resume']['type']=="application/pdf")
 {
 if($ok=move_uploaded_file($_FILES['resume']['tmp_name'],$filepath)){
     echo 'Uploaded Successfull';
-    $connect=mysqli_connect("localhost","root","","job");
+    $connect=mysqli_connect("localhost","root","root","job");
     $query="insert into cv(filename,logid) values('$fname',$id)";
     $output=mysqli_query($connect,$query);}
 else

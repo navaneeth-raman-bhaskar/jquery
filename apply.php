@@ -6,7 +6,7 @@ if ($_SESSION['type']=='student')
 {
 $id=$_SESSION['id'];
 $jid=$_GET['jid'];
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
 $query="insert into applied values($jid,$id)";
 $output=mysqli_query($connect,$query);
 

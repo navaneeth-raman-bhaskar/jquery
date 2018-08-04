@@ -122,11 +122,11 @@ session_start();
            /////////////////////////////////
            $logid=$_SESSION['id'];
            $type=$_SESSION['type'];
-        $connect=mysqli_connect("localhost","root","","job");
+        $connect=mysqli_connect("localhost","root","root","job");
 
            if ($type=='student')
            {
-           $query="select company.logid as toid,company.name as sender FROM applied inner join jobs on applied.jobid=jobs.jobid INNER join company on company.logid=jobs.logid WHERE applied.logid=$logid  group by toid";
+           $query="select DISTINCT company.logid as toid,company.name as sender FROM applied inner join jobs on applied.jobid=jobs.jobid INNER join company on company.logid=jobs.logid WHERE applied.logid=$logid";
            $output=mysqli_query($connect,$query);
            while($row=mysqli_fetch_array($output))
            {

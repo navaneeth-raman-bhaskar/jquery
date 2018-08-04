@@ -6,7 +6,7 @@ if ($_SESSION['type']=='student')
 {
 $skill=$_GET['skill'];
 $id=$_SESSION['id'];
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
 if ($skill)
 {
 $query="insert into skills values('$skill',$id)";

@@ -7,7 +7,7 @@ if ($_SESSION['type']=='student'||$_SESSION['type']=='company')
 $logid=$_SESSION['id'];
 $who=$_SESSION['type'];
 $id=$_GET['id'];
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
 ?>
     <!DOCTYPE html>
     <html lang="en">

@@ -5,7 +5,7 @@ if (isset($_SESSION['id']))
     if ($_SESSION['type']=='company')
     {
 $clogid=$_SESSION['id'];
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
 $query="select student.name,student.logid,jobs.title,email from applied inner join  jobs on applied.jobid = jobs.jobid inner join student on applied.logid = student.logid inner join credential on student.logid=credential.logid where jobs.logid=$clogid;";
 $output=mysqli_query($connect,$query);
 ?>

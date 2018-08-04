@@ -5,7 +5,7 @@ if(isset($_SESSION['id']))
 if ($_SESSION['type']=='company')
 {
 $id=$_SESSION['id'];
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
 
 ?>
     <link type="text/css" href="boot3/css/bootstrap.css" rel="stylesheet">

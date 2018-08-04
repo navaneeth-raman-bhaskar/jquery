@@ -76,7 +76,7 @@ if (isset($_SESSION['type']))
     </script>
     <?php
         echo '<h1>Site Users</h1>';
-        $connect=mysqli_connect("localhost","root","","job");
+        $connect=mysqli_connect("localhost","root","root","job");
         $query="select credential.logid,email,credential.type,student.name as sname,company.name as cname,status from credential LEFT OUTER join company on credential.logid=company.logid left outer join  student on credential.logid=student.logid";
         $output=mysqli_query($connect,$query);
 echo '<table class="table" id="tab">

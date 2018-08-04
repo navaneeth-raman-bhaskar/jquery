@@ -4,7 +4,7 @@ if (isset($_POST['username']))
 {
 $uname=$_POST['username'];
 $pass=$_POST['password'];
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
     $query="select logid from credential where email='$uname' and password='$pass'";
     $output=mysqli_query($connect,$query);
     $row=mysqli_fetch_array($output);

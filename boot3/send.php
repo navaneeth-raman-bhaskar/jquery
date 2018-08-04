@@ -16,7 +16,7 @@ if ($_SESSION['type']=='company')
 }
 
 //////////////////////////////
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
 $logid=$_SESSION['id'];
 $msg=$_GET['msg'];
 $time=date("h:i:sa");

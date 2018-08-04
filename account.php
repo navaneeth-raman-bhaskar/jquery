@@ -24,7 +24,7 @@ if (isset($_GET['sid']))
     </script>
     <?php
 }
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
 $query="select studid from student where logid=$id";
 $output=mysqli_query($connect,$query);
 $row=mysqli_fetch_array($output);

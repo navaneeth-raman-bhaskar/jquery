@@ -41,7 +41,7 @@ else
         <th>Skills required</th>
         <?php
         
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
 $query="select * from jobs inner join company on jobs.logid=company.logid inner join credential on credential.logid=company.logid where $cond";
 $output=mysqli_query($connect,$query);
        

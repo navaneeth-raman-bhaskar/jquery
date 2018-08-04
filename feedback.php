@@ -47,7 +47,7 @@ if (isset($_POST['sub']))
     $email=$_POST['email'];
     $country=$_POST['country'];
     $feed=$_POST['feed'];
-    $connect=mysqli_connect("localhost","root","","job");
+    $connect=mysqli_connect("localhost","root","root","job");
     $query="insert into feedback(name,email,country,feed) values('$name','$email','$country','$feed')";
     $output=mysqli_query($connect,$query);
     header("location:search.php");

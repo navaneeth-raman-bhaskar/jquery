@@ -1,7 +1,7 @@
 <?php
 $logid=$_GET['id'];
 $operation=$_GET['oper'];
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
 if ($operation==0)
 {
 $query="delete from credential where logid=$logid";

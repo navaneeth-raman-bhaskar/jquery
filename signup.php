@@ -4,7 +4,7 @@ if (isset($_POST['email']))
     $email=$_POST['email'];
     $pass=$_POST['password'];
     $type=$_POST['type'];
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
 $query="insert into credential(email,password,type,status) values('$email','$pass','$type',0);";
 $output=mysqli_query($connect,$query);
 

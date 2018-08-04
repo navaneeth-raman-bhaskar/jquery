@@ -14,7 +14,7 @@ $t=$_SESSION['type'];
         <th>Provided Company</th>
 
         <?php
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
 $query="SELECT * from jobs INNER JOIN applied ON jobs.jobid=applied.jobid INNER JOIN company ON jobs.logid=company.logid WHERE applied.logid=$id";
 $output=mysqli_query($connect,$query);
 while($row=mysqli_fetch_array($output))

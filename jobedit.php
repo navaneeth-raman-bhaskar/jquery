@@ -6,7 +6,7 @@ if ($_SESSION['type']=='company')
 {
 $id=$_SESSION['id'];
 $jid=$_GET['id'];
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
 $query="select * from jobs where jobid=$jid";
 $output=mysqli_query($connect,$query);
 $row=mysqli_fetch_array($output);

@@ -7,7 +7,7 @@
 
 
     <?php
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
 $query="select * from company";
 $output=mysqli_query($connect,$query);
 while($row=mysqli_fetch_array($output))

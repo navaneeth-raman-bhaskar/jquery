@@ -7,7 +7,7 @@ if ($who=='company')
 {
 
 $id=$_SESSION['id'];
-$connect=mysqli_connect("localhost","root","","job");
+$connect=mysqli_connect("localhost","root","root","job");
 ?>
     <!DOCTYPE html>
     <html lang="en">
